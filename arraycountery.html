@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array countery names same </title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script>
+        let country = ["America","Afaganistan", "Bagladesh","bhopal" , "Cenya" ,"India","Tokyo","Urop","Usa"];
+          const  output = {};
+
+          country.forEach((input)=>{
+            const firstletter = input.toLowerCase().slice(0,1)
+            if(Object.keys(output).includes(firstletter)){
+                 output[firstletter] = [...output[firstletter] , input]
+            }
+            else{
+                  output[firstletter ]= [input]
+            }
+          })
+          console.log(output)
+    </script>
+</body>
+</html>
